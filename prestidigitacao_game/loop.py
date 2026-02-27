@@ -22,22 +22,22 @@ for turno in range(1,total + 1):
         mao_bot = mao_bot + 1
 
     if(mao_bot == 1 and entrada == 1):
-        print(f"\nEmpatamos o turno{turno}")
+        print(f"\nEmpatamos o turno {turno}")
     elif mao_bot == 2 and entrada == 1:
-        print(f"\nGanhei o turno{turno}")
+        print(f"\nGanhei o turno {turno}")
     elif mao_bot == 3 and entrada == 1:
-        print(f"\nPerdi o turno{turno}")
+        print(f"\nPerdi o turno {turno}")
     elif mao_bot == 1 and entrada == 2:
-        print(f"\Perdi o turno{turno}")
+        print(f"\nPerdi o turno {turno}")
     elif mao_bot == 2 and entrada == 2:
-        print(f"\Empatamos o turno{turno}")
+        print(f"\nEmpatamos o turno {turno}")
     elif mao_bot == 3 and entrada == 2:
-        print(f"\nGanhei o turno{turno}")
+        print(f"\nGanhei o turno {turno}")
     elif mao_bot == 1 and entrada == 3:
-        print(f"\Ganhei o turno{turno}")
+        print(f"\nGanhei o turno {turno}")
     elif mao_bot == 2 and entrada == 3:
-        print(f"\nPerdi o turno{turno}")
+        print(f"\nPerdi o turno {turno}")
     elif mao_bot == 3 and entrada == 3:
-        print(f"\Empatamos o turno{turno}")
+        print(f"\nEmpatamos o turno {turno}")
 
 print("\nFim de jogo")

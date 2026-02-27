@@ -6,8 +6,28 @@ import random as rd
 
 #Definição das variáveis#
 n_secreto = rd.randrange(1, 101)
-n_tentativas = 5
+n_tentativas = 0
 rodada = 1
+
+print(n_secreto)
+
+pontuacao = 1000
+print(f"\nPontuação Atual: {pontuacao}\n")
+
+print("Níveis de dificuldade")
+print("\n(1) Fácil (2) Médio (3) Difícil (4) Aleatório\n")
+
+nivel = int(input("Defina um nível: "))
+
+if(nivel == 1):
+    n_tentativas = 12
+elif(nivel == 2):
+    n_tentativas = 8
+elif(nivel == 3):
+    n_tentativas = 4
+else:
+    n_tentativas = rd.randrange(1,13)
+
 
 for rodada in range(1,n_tentativas + 1):
     print(f"Rodada {rodada} de {n_tentativas}")
@@ -25,12 +45,16 @@ for rodada in range(1,n_tentativas + 1):
     #Verificação de acerto/erro#
     if(acertou):
         print("Parabéns, você acertou o número secreto")
+        print(f"Parabéns (ou não hahha)! Você fez {pontuacao} pontos.")
         break
     else:
         if(entrada_maior):
             print("Você errou! O número digitado foi maior que o secreto")
         if(entrada_menor):
             print("Você errou! O número digitado foi menor que o secreto")
+
+    pontos_perdidos = abs(n_secreto - entrada)
+    pontuacao = pontuacao - pontos_perdidos
     rodada = rodada + 1
     
 print("\nFim de jogo")
