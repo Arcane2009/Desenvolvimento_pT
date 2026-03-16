@@ -46,3 +46,6 @@ def jogar_jokenpo():
             print(f"\nEmpatamos o turno {turno}")
 
     print("\nFim de jogo")
+
+if(__name__ == "__main__"):
+    jogar_jokenpo()

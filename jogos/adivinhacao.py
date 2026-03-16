@@ -1,6 +1,7 @@
 import random as rd
 
 def jogar_adivinhacao():
+
     
     print("-------------------------------")
     print("\nBem vindo ao jogo da adivinhação!\n")
@@ -59,4 +60,8 @@ def jogar_adivinhacao():
         pontuacao = pontuacao - pontos_perdidos
         rodada = rodada + 1
         
-    print("\nFim de jogo")
+    print("\nFim de jogo\n")
+    print(f"O número secreto era = {n_secreto}")
+
+if(__name__ == "__main__"):
+    jogar_adivinhacao()
