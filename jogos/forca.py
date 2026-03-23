@@ -3,7 +3,7 @@ def jogar_forca():
     print("\nBem vindo ao jogo da forca!\n")
     print("-------------------------------")
 
-    palavra_secreta = "processador"
+    palavra_secreta = "cordeiro"
     perdeu = False
     acertou = False
 
@@ -21,3 +21,4 @@ def jogar_forca():
 
 if(__name__ == "__main__"):
     jogar_forca()
+
