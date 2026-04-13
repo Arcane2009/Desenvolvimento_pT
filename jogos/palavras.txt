@@ -26,3 +26,5 @@ sina
 desejo
 nascimento
 espera
+sangue
+fantasma

@@ -34,7 +34,7 @@ def chute_correto(palavra_secreta, chute, letras_acertadas):
     for letra in palavra_secreta:
         if chute == letra:
             letras_acertadas[index] = letra
-            index += 1
+        index += 1
             
 def jogar_forca():
     mensagem_inicial()
