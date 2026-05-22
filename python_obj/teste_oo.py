@@ -27,3 +27,7 @@ depositar(conta, 400.0)
 extrato(conta)
 sacar(conta, 200)
 extrato(conta)
+
+#atributo = o que têm
+#método = o que consegue fazer
+#dentro da classe => métsodo
