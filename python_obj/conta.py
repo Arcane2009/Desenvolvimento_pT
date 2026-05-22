@@ -9,10 +9,13 @@ class Conta:
         print(f"Saldo: {self.saldo} do titular {self.titular}")
 
     def depositar(self, valor):
-        self.saldo += valor
+        if(valor < 0):
+            print("Valores negativos não podem ser depositados")
+        else:
+            self.saldo += valor
 
     def sacar(self, valor):
         if(self.saldo < valor):
-            print("saldo insuficiente")
+            print("Saldo insuficiente")
         else:
             self.saldo -= valor
