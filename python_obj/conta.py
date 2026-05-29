@@ -27,8 +27,37 @@ class Conta:
             self.sacar(valor)
             destino.depositar(valor)
 
+    #Métodos apenas para retornar o valor das propriedades
+    @property
+    def saldo(self):
+        return self.__saldo
+    
+    @property
+    def titular(self):
+        return self.__titular
+    
+    @property
+    def limite(self):
+        return self.__limite
+    
+    @property
+    def numero(self):
+        return self.__numero
+
+    #Métodos para manipular os valores das propriedades
+    @saldo.setter
+    def saldo(self,saldo):
+        self.__saldo = saldo
+
+    @limite.setter
+    def limite(self,limite):
+        self.__limite = limite
+
 #atributo = o que têm
 #método = o que consegue fazer
 #dentro da classe => métsodo
 # "__" é igual ao private()
 # "__" deixa privado
+
+#get sempre te um return, ele é um método que pega um valor(dado)
+#set sempre tem um get, ele é um método que muda os valores obtidos
