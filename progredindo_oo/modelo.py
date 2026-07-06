@@ -4,6 +4,7 @@
 #Séries: Nome, ano, temporadas, curtir
 
 #Classe mãe/principal
+#Super classe
 class Programas:
     def __init__(self, nome, ano):
         self._nome = nome.title()
@@ -23,17 +24,13 @@ class Programas:
 
 class Filmes(Programas):
     def __init__(self, nome, ano, duracao):
-        self._nome = nome.title()
-        self.ano = ano
+        super().__init__(nome, ano)
         self.duracao = duracao
-        self._curtir = 0
 
 class Series(Programas):
     def __init__(self, nome, ano, temporadas):
-        self._nome = nome.title()
-        self.ano = ano
+        super().__init__(nome, ano)
         self.temporadas = temporadas
-        self._curtir = 0
 
 #Instanciar é salvar em uma variável
 
