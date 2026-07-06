@@ -3,47 +3,43 @@
 #Filme: Nome, ano, duração, curtir
 #Séries: Nome, ano, temporadas, curtir
 
-class Filmes:
+#Classe mãe/principal
+class Programas:
+    def __init__(self, nome, ano):
+        self._nome = nome.title()
+        self.ano = ano
+        self._curtir = 0
+
+    @property
+    def valor_curtir(self):
+        return self._curtir
+    
+    @property
+    def valor_nome(self):
+        return self._nome
+    
+    def curtida(self):
+        self._curtir += 1
+
+class Filmes(Programas):
     def __init__(self, nome, ano, duracao):
-        self.__nome = nome.title()
+        self._nome = nome.title()
         self.ano = ano
         self.duracao = duracao
-        self.__curtir = 0
+        self._curtir = 0
 
-    @property
-    def valor_curtir(self):
-        return self.__curtir
-    
-    @property
-    def valor_nome(self):
-        return self.__nome
-    
-    def curtida(self):
-        self.__curtir += 1
-
-class Series:
+class Series(Programas):
     def __init__(self, nome, ano, temporadas):
-        self.__nome = nome.title()
+        self._nome = nome.title()
         self.ano = ano
         self.temporadas = temporadas
-        self.__curtir = 0
-
-    @property
-    def valor_curtir(self):
-        return self.__curtir
-    
-    @property
-    def valor_nome(self):
-        return self.__nome
-    
-    def curtida(self):
-        self.__curtir += 1
+        self._curtir = 0
 
 #Instanciar é salvar em uma variável
 
 aventuras_superman = Series("Minhas Aventuras com Superman", 2023, 3)
 aventuras_superman.curtida()
-print(f"\nNome: {aventuras_superman.__nome} - Ano: {aventuras_superman.ano} - Temporadas: {aventuras_superman.temporadas}")
+print(f"\nNome: {aventuras_superman.valor_nome} - Ano: {aventuras_superman.ano} - Temporadas: {aventuras_superman.temporadas} - Curtidas: {aventuras_superman.valor_curtir}")
 
 avatar = Filmes("Avatar", 2009, 177)
-print(f"\nNome: {avatar.__nome} - Ano: {avatar.ano} - Duração: {avatar.duracaos}")
+print(f"\nNome: {avatar.valor_nome} - Ano: {avatar.ano} - Duração: {avatar.duracao} - Curtidas: {avatar.valor_curtir}")
