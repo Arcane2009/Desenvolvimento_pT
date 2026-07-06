@@ -40,3 +40,9 @@ print(f"\nNome: {aventuras_superman.valor_nome} - Ano: {aventuras_superman.ano} 
 
 avatar = Filmes("Avatar", 2009, 177)
 print(f"\nNome: {avatar.valor_nome} - Ano: {avatar.ano} - Duração: {avatar.duracao} - Curtidas: {avatar.valor_curtir}")
+
+filmes_series = [aventuras_superman, avatar]
+
+for programas in filmes_series:
+    detalhe = programas.duracao if hasattr(programas, 'duracao') else programas.temporadas
+    print(f"\n{programas.valor_nome} - {programas.ano} - {detalhe}")
