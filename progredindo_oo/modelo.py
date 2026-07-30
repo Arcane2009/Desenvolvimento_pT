@@ -41,17 +41,39 @@ class Series(Programas):
     def __str__(self):
         return f"\n{self._nome} - {self.ano} - {self.temporadas} temporadas - {self._curtir} curtidas"
 
+class Playlist:
+    def __init__(self, nomePl, elementos):
+        self.nomePl = nomePl
+        self.elementos = elementos
+
+    def tamanho(self):
+        return len(self.elementos)
+
 #Instanciar é salvar em uma variável
 
+#Séries
 aventuras_superman = Series("Minhas Aventuras com Superman", 2023, 3)
-aventuras_superman.curtida()
-print(f"\nNome: {aventuras_superman.valor_nome} - Ano: {aventuras_superman.ano} - Temporadas: {aventuras_superman.temporadas} - Curtidas: {aventuras_superman.valor_curtir}")
+ratched = Series("Ratched", 2020, 1)
+bro99 = Series("Brooklyn Nine-Nine", 2013, 8)
 
+#Filmes
 avatar = Filmes("Avatar", 2009, 177)
-print(f"\nNome: {avatar.valor_nome} - Ano: {avatar.ano} - Duração: {avatar.duracao} - Curtidas: {avatar.valor_curtir}")
+hereditario = Filmes("Hereditário", 2018, 127)
+it = Filmes("It: A Coisa", 2017, 135)
 
-filmes_series = [aventuras_superman, avatar]
+#Curtidas
+aventuras_superman.curtida()
+avatar.curtida()
+hereditario.curtida()
+ratched.curtida()
+it.curtida()
+bro99.curtida()
 
-for programas in filmes_series:
+filmes_series = [aventuras_superman, avatar, hereditario, ratched, it, bro99]
+plFim_de_Semana = Playlist("Fim de semana", filmes_series)
+
+for programas in plFim_de_Semana.elementos:
     print(programas)
         
+#nome, programas, tamanho()
+#nomePl = nome da playlist
