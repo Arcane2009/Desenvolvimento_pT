@@ -22,24 +22,24 @@ class Programas:
     def curtida(self):
         self._curtir += 1
 
-    def imprime(self):
-        print(f"\n{self._nome} - {self.ano} - {self._curtir} Curtidas")
+    def __str__(self):
+        return f"\n{self._nome} - {self.ano} - {self._curtir} Curtidas"
 
 class Filmes(Programas):
     def __init__(self, nome, ano, duracao):
         super().__init__(nome, ano)
         self.duracao = duracao
 
-    def imprime(self):
-        print(f"\n{self._nome} - {self.ano} - {self.duracao} - {self._curtir} Curtidas")
+    def __str__(self):
+        return f"\n{self._nome} - {self.ano} - {self.duracao} minutos - {self._curtir} curtidas"
 
 class Series(Programas):
     def __init__(self, nome, ano, temporadas):
         super().__init__(nome, ano)
         self.temporadas = temporadas
 
-    def imprime(self):
-        print(f"\n{self._nome} - {self.ano} - {self.temporadas} - {self._curtir} Curtidas")
+    def __str__(self):
+        return f"\n{self._nome} - {self.ano} - {self.temporadas} temporadas - {self._curtir} curtidas"
 
 #Instanciar é salvar em uma variável
 
@@ -53,5 +53,5 @@ print(f"\nNome: {avatar.valor_nome} - Ano: {avatar.ano} - Duração: {avatar.dur
 filmes_series = [aventuras_superman, avatar]
 
 for programas in filmes_series:
-    programas.imprime()
+    print(programas)
         
