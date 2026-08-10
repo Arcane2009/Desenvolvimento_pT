@@ -50,9 +50,8 @@ class Playlist():
     def listagem(self):
         return self._elementos
     
-    @property
-    def tamanho(self):
-        return self._elementos
+    def __getitem__(self, item):
+        return self._elementos[item]
 
 #Séries
 aventuras_superman = Series("Minhas Aventuras com Superman", 2023, 3)
@@ -75,12 +74,28 @@ ratched.curtida()
 filmes_series = [aventuras_superman, avatar, hereditario, ratched, it, bro99]
 plFim_de_Semana = Playlist("Fim de semana", filmes_series)
 
-print(f"Tamanho da Playlist: {len(plFim_de_Semana)}")
+#print(f"Tamanho da Playlist: {len(plFim_de_Semana)}")
 print(f"\nEstá na lista? {avatar in plFim_de_Semana}")
+print(f"{plFim_de_Semana[2]}, foi selecionado e está na posição 2")
 
 for programas in plFim_de_Semana:
-    print(programas)
+    print(f"\n {programas}")
         
 #Instanciar é salvar em uma variável
 #nome, programas, tamanho()
 #nomePl = nome da playlist
+
+#for programas in 
+#   print(programas)
+
+#Python Data Model
+#Inicialização:__init__
+#Representação:__str__,__repr__
+#Container/Sequência:__contains__,__iter__,__len__,__getitem__
+#Numéricas:__add__,__sub__,__mul__,__mod__
+
+#Python Data Model, Exemplos
+#Inicialização:objt = Novo()
+#Representação:print(obj),str(obj),repr(obj)
+#Container/Sequência:len(obj),item in obj, for in obj,obj[2:3]
+#Numéricas:obj+outro_obj,obj*obj
